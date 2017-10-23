@@ -1,0 +1,63 @@
+@import '../../styles/breakpoints.scss';
+
+@mixin box-shadow($shadows...) {
+  -moz-box-shadow: $shadows;
+  -webkit-box-shadow: $shadows;
+  box-shadow: $shadows;
+}
+
+.navbar-inverse {
+	background-color: #ffffff;
+	min-height: auto;
+	@include box-shadow(0 1px 2px rgba(0,0,0,0.1));
+	border: none;
+	button.navbar-toggle {
+		border-color: #989494;
+		cursor: pointer;
+		&:active, &:focus, &:visited {
+		  @media screen and (max-width: $break-medium) {
+		  	background-color: #ffffff;
+		  }
+		} 
+		.icon-bar {
+			background-color: #989494;
+		}
+	}
+  .navbar-collapse  {
+  	border-color: #ded8d8;
+		@media screen and (max-width: $break-medium) {
+			ul {
+				background-color: #ffffff;
+				margin-top: 0px;
+				padding: 15px 0;
+				li {
+					display: inline;
+					a {
+						padding: 0px;
+					}
+				}	
+			}
+		}
+  }
+	.navbar-center {
+		text-align: center;
+		float: none;
+  	>li {
+		  float: none;
+			display: inline-block;
+			text-transform: uppercase;
+			margin-right: 40px;
+			font-size: 1em;
+			color: #757575;
+      font-family: 'Nunito', sans-serif;
+      cursor: pointer;
+			> a {
+				padding-top: 12px;
+				padding-bottom: 12px;
+				&:hover, &:focus {
+          color: #4f4c4c;
+				}
+			}
+		}
+	}
+}

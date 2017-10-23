@@ -1,0 +1,29 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" (click)="isCollapsed = !isCollapsed">
+
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="navbar-collapse collapse" id="navbar" [collapse]="isCollapsed">
+      <ul class="nav navbar-nav navbar-center">
+        <li>
+          <a (click)="navigateTo('#about_me')">About me</a>
+        </li>
+        <li>
+          <a (click)="navigateTo('#portfolio')">Portfolio</a>
+        </li>
+        <li>
+          <a (click)="navigateTo('#skills')">Skills</a>
+        </li>
+        <li>
+          <a (click)="navigateTo('#contact')">Contact</a>
+        </li>
+      </ul>
+    </div> 
+  </div> 
+</nav>
